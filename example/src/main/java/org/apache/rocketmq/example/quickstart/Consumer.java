@@ -24,6 +24,7 @@ import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.common.consumer.ConsumeFromWhere;
 import org.apache.rocketmq.common.message.MessageExt;
+import org.apache.rocketmq.example.Config;
 
 /**
  * This example shows how to subscribe and consume messages using providing {@link DefaultMQPushConsumer}.
@@ -48,6 +49,7 @@ public class Consumer {
          * }
          * </pre>
          */
+        consumer.setNamesrvAddr(Config.NAMESVR_ADDR);
 
         /*
          * Specify where to start in case the specified consumer group is a brand new one.
